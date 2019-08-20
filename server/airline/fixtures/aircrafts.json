@@ -1,0 +1,272 @@
+[
+{
+  "model": "airline.aircraftname",
+  "pk": 1,
+  "fields": {
+    "name": "Airbus"
+  }
+},
+{
+  "model": "airline.aircraftname",
+  "pk": 2,
+  "fields": {
+    "name": "Boeing"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 1,
+  "fields": {
+    "model": "A220"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 2,
+  "fields": {
+    "model": "A310"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 3,
+  "fields": {
+    "model": "A340"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 4,
+  "fields": {
+    "model": "A380"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 5,
+  "fields": {
+    "model": "717"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 6,
+  "fields": {
+    "model": "767"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 7,
+  "fields": {
+    "model": "777"
+  }
+},
+{
+  "model": "airline.aircraftmodel",
+  "pk": 8,
+  "fields": {
+    "model": "787"
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 1,
+  "fields": {
+    "name": 1,
+    "model": 1,
+    "budget_places": 88,
+    "vip_places": 32
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 2,
+  "fields": {
+    "name": 1,
+    "model": 2,
+    "budget_places": 150,
+    "vip_places": 60
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 3,
+  "fields": {
+    "name": 1,
+    "model": 3,
+    "budget_places": 270,
+    "vip_places": 80
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 4,
+  "fields": {
+    "name": 1,
+    "model": 4,
+    "budget_places": 498,
+    "vip_places": 102
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 5,
+  "fields": {
+    "name": 1,
+    "model": 1,
+    "budget_places": 150,
+    "vip_places": 0
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 6,
+  "fields": {
+    "name": 1,
+    "model": 2,
+    "budget_places": 150,
+    "vip_places": 60
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 7,
+  "fields": {
+    "name": 1,
+    "model": 3,
+    "budget_places": 270,
+    "vip_places": 80
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 8,
+  "fields": {
+    "name": 1,
+    "model": 4,
+    "budget_places": 498,
+    "vip_places": 102
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 9,
+  "fields": {
+    "name": 1,
+    "model": 1,
+    "budget_places": 150,
+    "vip_places": 0
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 10,
+  "fields": {
+    "name": 1,
+    "model": 1,
+    "budget_places": 130,
+    "vip_places": 0
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 11,
+  "fields": {
+    "name": 1,
+    "model": 2,
+    "budget_places": 180,
+    "vip_places": 40
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 12,
+  "fields": {
+    "name": 1,
+    "model": 2,
+    "budget_places": 210,
+    "vip_places": 50
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 13,
+  "fields": {
+    "name": 2,
+    "model": 5,
+    "budget_places": 60,
+    "vip_places": 40
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 14,
+  "fields": {
+    "name": 2,
+    "model": 6,
+    "budget_places": 120,
+    "vip_places": 60
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 15,
+  "fields": {
+    "name": 2,
+    "model": 7,
+    "budget_places": 270,
+    "vip_places": 50
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 16,
+  "fields": {
+    "name": 2,
+    "model": 8,
+    "budget_places": 320,
+    "vip_places": 80
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 17,
+  "fields": {
+    "name": 2,
+    "model": 5,
+    "budget_places": 60,
+    "vip_places": 40
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 18,
+  "fields": {
+    "name": 2,
+    "model": 7,
+    "budget_places": 270,
+    "vip_places": 50
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 19,
+  "fields": {
+    "name": 2,
+    "model": 7,
+    "budget_places": 320,
+    "vip_places": 40
+  }
+},
+{
+  "model": "airline.aircraft",
+  "pk": 20,
+  "fields": {
+    "name": 2,
+    "model": 8,
+    "budget_places": 320,
+    "vip_places": 80
+  }
+}
+]
