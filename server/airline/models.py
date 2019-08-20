@@ -119,7 +119,7 @@ class Passport(models.Model):
                                           ])
     passport_number = models.IntegerField(null=False,
                                           validators=[
-                                              RegexValidator(r'\d{4}')
+                                              RegexValidator(r'\d{6}')
                                           ])
 
     class Meta:
