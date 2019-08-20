@@ -7,17 +7,17 @@ from django.db import models
 
 
 class Country(models.Model):
-    title = models.CharField(max_length=250)
+    name = models.CharField(max_length=200, null=False)
 
     class Meta:
         verbose_name = 'Country'
         verbose_name_plural = 'Countries'
 
-        ordering = ['title']
+        ordering = ['name']
 
 
 class Region(models.Model):
-    title = models.CharField(max_length=250)
+    name = models.CharField(max_length=200, null=False)
     country = models.ForeignKey('Country', on_delete=models.PROTECT,
                                 null=False, related_name='region')
 
@@ -25,11 +25,11 @@ class Region(models.Model):
         verbose_name = 'Region'
         verbose_name_plural = 'Regions'
 
-        ordering = ['title']
+        ordering = ['name']
 
 
 class City(models.Model):
-    title = models.CharField(max_length=250)
+    name = models.CharField(max_length=200, null=False)
     region = models.ForeignKey('Region', on_delete=models.PROTECT,
                                null=False, related_name='city')
 
@@ -37,7 +37,7 @@ class City(models.Model):
         verbose_name = 'City'
         verbose_name_plural = 'Cities'
 
-        ordering = ['title']
+        ordering = ['name']
 
 
 class AircraftName(models.Model):
