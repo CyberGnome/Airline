@@ -1,6 +1,7 @@
 import uuid
 
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import RegexValidator
 from django.db import models
 
 # Create your models here.
@@ -112,8 +113,14 @@ class Passport(models.Model):
 
     gender = models.IntegerField(choices=GENDER_CHOICE,
                                  default=GENDER_MALE)
-    passport_series = models.IntegerField(null=False)
-    passport_number = models.IntegerField(null=False)
+    passport_series = models.IntegerField(null=False,
+                                          validators=[
+                                              RegexValidator(r'\d{4}')
+                                          ])
+    passport_number = models.IntegerField(null=False,
+                                          validators=[
+                                              RegexValidator(r'\d{4}')
+                                          ])
 
     class Meta:
         verbose_name = 'Passport'
