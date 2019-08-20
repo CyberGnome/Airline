@@ -40,16 +40,33 @@ class City(models.Model):
         ordering = ['title']
 
 
+class AircraftName(models.Model):
+    name = models.CharField(max_length=20)
+
+    class Meta:
+        verbose_name = 'Aircraft\'s Name'
+        verbose_name_plural = 'Aircraft\'s Names'
+
+
+class AircraftModel(models.Model):
+    model = models.CharField(max_length=10)
+
+    class Meta:
+        verbose_name = 'Aircraft\'s Model'
+        verbose_name_plural = 'Aircraft\'s Model'
+
+
 class Aircraft(models.Model):
-    title = models.CharField(max_length=50)
+    name = models.ForeignKey('AircraftName', on_delete=models.PROTECT,
+                             null=False, related_name='aircraft')
+    model = models.ForeignKey('AircraftModel', on_delete=models.PROTECT,
+                              null=True, related_name='aircraft')
     budget_places = models.IntegerField(default=0)
     vip_places = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = 'Aircraft'
         verbose_name_plural = 'Aircraft'
-
-        ordering = ['title']
 
 
 class Flight(models.Model):
