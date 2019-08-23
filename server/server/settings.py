@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'airline.apps.AirlineConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
