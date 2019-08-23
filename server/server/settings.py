@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'airline.User'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'airline.apps.AirlineConfig',
+    'users.apps.UsersConfig',
     'rest_framework',
 ]
 

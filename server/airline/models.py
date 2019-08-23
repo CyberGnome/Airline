@@ -98,40 +98,11 @@ class Flight(models.Model):
         ordering = ['departure_date', 'code']
 
 
-class Passport(models.Model):
-    GENDER_MALE = 0
-    GENDER_FEMALE = 1
-
-    GENDER_CHOICE = (
-        (GENDER_MALE, 'Male'),
-        (GENDER_FEMALE, 'Female')
-    )
-
-    name = models.CharField(max_length=150, null=False)
-    surname = models.CharField(max_length=150, null=False)
-    Patronymic = models.CharField(max_length=150, blank=True, default="")
-
-    gender = models.IntegerField(choices=GENDER_CHOICE,
-                                 default=GENDER_MALE)
-    passport_series = models.IntegerField(null=False,
-                                          validators=[
-                                              RegexValidator(r'\d{4}')
-                                          ])
-    passport_number = models.IntegerField(null=False,
-                                          validators=[
-                                              RegexValidator(r'\d{6}')
-                                          ])
-
-    class Meta:
-        verbose_name = 'Passport'
-        verbose_name_plural = 'Passports'
-
-
 class Ticket(models.Model):
     code = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     flight = models.OneToOneField('Flight', on_delete=models.PROTECT,
                                   null=False)
-    passenger = models.OneToOneField('Passport', on_delete=models.PROTECT,
+    passenger = models.OneToOneField('users.Passport', on_delete=models.PROTECT,
                                      null=False)
     place = models.IntegerField(default=0)
     price = models.FloatField(default=0.0)
@@ -140,14 +111,3 @@ class Ticket(models.Model):
     class Meta:
         verbose_name = 'Ticket'
         verbose_name_plural = 'Tickets'
-
-
-class User(AbstractUser):
-    passport = models.ForeignKey('Passport', on_delete=models.SET_NULL,
-                                 null=True, related_name='user')
-    ticket = models.ForeignKey('Ticket', on_delete=models.SET_NULL,
-                               null=True, related_name='user')
-
-    class Meta:
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
