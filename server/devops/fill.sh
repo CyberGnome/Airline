@@ -42,3 +42,5 @@
 ./manage.py loaddata airline/fixtures/cities32.json
 ./manage.py loaddata airline/fixtures/cities33.json
 ./manage.py loaddata airline/fixtures/cities34.json
+
+./manage.py shell -c "from users.models import CustomUser as User; User.objects.create_superuser('admin@airline.local', 'admin')"
